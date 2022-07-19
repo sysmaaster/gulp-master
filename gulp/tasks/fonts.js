@@ -17,8 +17,7 @@ export const otfToTtf = () => {
         formats: ['ttf']
     }))
     //вигружаєм в початкову папку
-    .pipe(app.gulp.dest(app.path.srcFolder))
-    .pipe(app.gulp.dest(app.path.build.fonts))
+    .pipe(app.gulp.dest(`${app.path.src.fonts}`))
 }
 export const ttfToWoff = () => {
     //шукаєм файли щрифта ,ttf
