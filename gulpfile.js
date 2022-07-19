@@ -49,6 +49,7 @@ const dev = gulp.series(reset, mainTask,  gulp.parallel(watcher,server));
 const build = gulp.series(reset,mainTask);
 
 //Експорт Сценаріїв
+export { fonts }
 export { dev }
 export { build }
 
