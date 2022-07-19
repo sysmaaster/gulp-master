@@ -50,8 +50,13 @@ export const scss = () => {
             )
         )
 
-        //розкрити якщо потрібен не сжатий дубль файл стилів
-        .pipe(app.gulp.dest(app.path.build.css))
+        //не сжатий дубль файл стилів
+        .pipe(
+            app.plugins.if(
+                app.isDev,
+                app.gulp.dest(app.path.build.css)
+            )
+        )
         .pipe(
             app.plugins.if(
                 app.isBuild,
