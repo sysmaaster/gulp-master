@@ -48,5 +48,13 @@
     "webp-converter": "2.2.3",
     "webpack": "^5.73.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.6.3",
+    "magnific-popup": "^1.1.0",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
   }
 }

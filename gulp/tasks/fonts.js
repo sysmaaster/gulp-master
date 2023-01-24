@@ -3,7 +3,7 @@ import fonter from 'gulp-fonter';
 import ttf2woff2 from 'gulp-ttf2woff2';
 
 export const otfToTtf = () => {
-    //шукаєм файли щрифта ,otf
+    //шукаємо файли шрифт otf
     return app.gulp.src(`${app.path.src.fonts}*.otf`, {})
     .pipe(app.plugins.plumber(
         app.plugins.notify.onError({
@@ -12,15 +12,15 @@ export const otfToTtf = () => {
         })
     ))
     
-    //конвертуєм   в ttf
+        //конвертуємо в ttf
     .pipe(fonter({
         formats: ['ttf']
     }))
-    //вигружаєм в початкову папку
+        //вигружаємо в початкову теку
     .pipe(app.gulp.dest(`${app.path.src.fonts}`))
 }
 export const ttfToWoff = () => {
-    //шукаєм файли щрифта ,ttf
+    //шукаємо файли шрифт ttf
     return app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`, {})
     .pipe(app.plugins.plumber(
         app.plugins.notify.onError({
@@ -28,21 +28,21 @@ export const ttfToWoff = () => {
             message: "Error: <%= error.message %>"
         })
     ))
-    //конвертуєм   в ,woff
+        //конвертуєм   в woff
     .pipe(fonter({
         formats: ['woff']
     }))
-//вигружаєм в папку з  результатом
+        //вигружаємо в теку з результатом
     .pipe(app.gulp.dest(app.path.build.fonts))
-//шукаєм файли щрифта ,woff2
+        //шукаємо файли шрифт woff2
     .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.ttf`))
-//конвертуєм   в ,woff2
+        //конвертуєм в woff2
     .pipe(ttf2woff2())
-//вигружаєм в папку з  результатом
+        //вигружаємо в теку з результатом
     .pipe(app.gulp.dest(app.path.build.fonts))
 }
 export const fontsStyle = () => {
-//Подключение шрифтов в файл стилей css
+//Підключення шрифтів у файл стилей Css
     let fontsFile = `${app.path.srcFolder}/scss/fonts.scss`;
     // Проверяем существует ли файлы шрифтов
     fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
@@ -84,7 +84,7 @@ export const fontsStyle = () => {
              }
           } else {
              //Если файл есть, то выводим сообщение
-             console.log('Файл scss/fonts.scss уже существует.Для обновления нужно его удалить');
+              console.log( 'Файл scss/fonts.scss уже существует. Для обновления нужно его удалить' );
           }
        }
     });

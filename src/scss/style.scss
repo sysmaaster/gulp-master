@@ -1,8 +1,5 @@
 @import "fonts";
-@import "null.scss";
-body{
-    background-color: black;
-    span{
-        color: red;
-    }
-}
+@import "vars";
+@import "lib";
+
+@import "media";

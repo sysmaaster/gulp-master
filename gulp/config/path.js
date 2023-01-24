@@ -1,4 +1,4 @@
-//Отриманя назви папки проекта
+//Отримання назви проекта
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 

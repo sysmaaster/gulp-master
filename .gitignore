@@ -2,3 +2,4 @@ node_modules
 dist
 version.json
 src/scss/fonts.scss
+package-lock.json
