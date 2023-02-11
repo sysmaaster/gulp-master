@@ -6,6 +6,7 @@
 - `npm -v`
 - `npm i`
 
+для віндовс виконати налаштування у файлі `gulp/tasks/fonts.js` розкрити строку `2 //import fonter from 'gulp-fonter'; //windows` видаляючи строку 3 - Лінукс
 
 ### Сценарії
   - ` dev ` 
