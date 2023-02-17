@@ -1,5 +1,8 @@
 # gulp-master install  Node.js - NPM
-- `sudo apt install nodejs -y`
+
+Node.js v18.x:
+# Using Ubuntu 
+- `curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - sudo apt-get install -y nodejs`
 - `sudo apt instal npm -y`
 - `npm install -g npm`
 - `node -v`
